@@ -1,9 +1,11 @@
-import { InicioComponent } from './inicio/inicio.component';
-import { CadastrarComponent } from './cadastrar/cadastrar.component';
-import { EntrarComponent } from './entrar/entrar.component';
+
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { AuthService } from './service/auth.service';
 
+import { EntrarComponent } from './entrar/entrar.component';
+import { CadastrarComponent } from './cadastrar/cadastrar.component';
+import { InicioComponent } from './inicio/inicio.component';
 
 const routes: Routes = [
 
@@ -14,7 +16,6 @@ const routes: Routes = [
 
   {path: 'inicio', component: InicioComponent}
 
-
 ];
 
 @NgModule({
@@ -22,5 +23,7 @@ const routes: Routes = [
   exports: [RouterModule]
 })
 export class AppRoutingModule {
-  title = 'Olá Mundo!';
+constructor(
+  public auth: AuthService
+){}
 }
