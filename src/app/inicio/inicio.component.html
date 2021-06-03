@@ -1,17 +1,17 @@
 <div class="container-fluid">
 
-    <div class="row bg-primary">
-        <div class="col-m-6">
+    <div class="row bg-primary d-flex align-items-center">
+        <div class="col-md-6">
 
-            <div class="row d-flex justify-content-center">
-                <div class="col-m-6 text-white">
+            <div class="row d-flex justify-content-center" >
+                <div class="col-md-6 text-white">
                     <h1 class="fs-54">Seja bem vindo(a)!</h1>
                     <h5 class="fs-18">expresse aqui os seus pensamentos e opiniões!</h5>
             </div>
          </div>
 
          <div class="row d-flex justify-content-center mt-3 mb-5">
-            <div class="col-m-6">
+            <div class="col-md-6">
                 <button class="btn btn-light mr-2"data-toggle="modal" 
                 data-target="#novaPostagem">Nova Postagem</button>
                 <a class="btn btn-outline-light" href="#postagens">Ver Postagens</a>
@@ -56,7 +56,7 @@
 
  
   <!-- Modal -->
-  <div class="modal fade" id="ExemploModalCentralizado" tabindex="-1" role="dialog" aria-labelledby="TituloModalCentralizado" aria-hidden="true">
+  <div class="modal fade" id="novaPostagem" tabindex="-1" role="dialog" aria-labelledby="TituloModalCentralizado" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered" role="document">
       <div class="modal-content">
         <div class="modal-header">
@@ -78,7 +78,7 @@
                 </div>
                 
                 <div class="form-group">
-                    <label for="texto">Escolha um tema ou <a href="">cadastre um novo</a>: </label>
+                    <label for="texto">Escolha um tema ou <a routerLink='/tema'>cadastre um novo</a>: </label>
                     <select name="tema" id="tema" class="form-control">
                     <option value="">Temas</option>
                     </select>
